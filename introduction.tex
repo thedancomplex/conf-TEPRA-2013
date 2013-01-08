@@ -1,3 +1,14 @@
+Hubo is controlled via an opensource BSD software platform called Hubo-ACH which utilizes real-time multi-process communications.  Hubo-ACH utilized the inter-process communications platform called ACH \cite{dantam2012ach}.
+
+\begin{figure}[thpb]
+  \centering
+\includegraphics[width=1.0\columnwidth]{./pix/hubo-ach-diagram.pdf}
+  \caption{Hubo Primary Controller (HPC) and system framework}
+  \label{fig:graph}
+\end{figure}
+
+
+
 ACH is currently being used as the primary IPC method for the Primary Hubo Controller (PHC) for the Hubo2 Plus full-size humanoid robots.  
 The Hubo2 Plus is a 130 $cm$ tall humanoid robot commonly referred to as Hubo.  
 Hubo weighs 37 $kg$ and has 40 DOF.
@@ -7,12 +18,12 @@ There are 12 DOF in each leg, roll, pitch and yaw in the hip, pitch in the knee 
 The PHC runs on the concept of using separate process for 
 
 
-\begin{figure}[thpb]
-  \centering
-\includegraphics[width=1.0\columnwidth]{./pix/tmpGraph.png}
-  \caption{Hubo Primary Controller (HPC) and system framework}
-  \label{fig:graph}
-\end{figure}
+%\begin{figure}[thpb]
+%  \centering
+%\includegraphics[width=1.0\columnwidth]{./pix/tmpGraph.png}
+%  \caption{Hubo Primary Controller (HPC) and system framework}
+%  \label{fig:graph}
+%\end{figure}
 
 The primary PHC process is a daemon that talks over the CAN bus to all of the Hubo motor drivers and sensors.  
 The \textit{feedforward} and \textit{feedback} states are stored in the \textit{HUBO\_REF\_CHANNEL} and \textit{HUBO\_STATE\_CHANNEL}.  
@@ -57,12 +68,13 @@ The key point is that the PHC runs with a period of $T_H$ and updates the motors
 The sensors are also updated at a period of $T_H$.
 The structure of the system can be found in Fig.~\ref{fig:graph}.
 
-\begin{figure}[thpb]
-  \centering
-\includegraphics[width=1.0\columnwidth]{./pix/hubo_valve.png}
-  \caption{Hubo running PHC turning a valve using trajectories created using Bi-RRTs. }
-  \label{fig:valve}
-\end{figure}
+
+%\begin{figure}[thpb]
+%  \centering
+%\includegraphics[width=1.0\columnwidth]{./pix/hubo_valve.png}
+%  \caption{Hubo running PHC turning a valve using trajectories created using Bi-RRTs. }
+%  \label{fig:valve}
+%\end{figure}
 
 Current capabilities of the PHC system includes:
 
